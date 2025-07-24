@@ -1,4 +1,4 @@
-package loglevel
+package logging
 
 // LogLevel represents the severity of the log message.
 type LogLevel int

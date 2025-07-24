@@ -2,13 +2,12 @@ package main
 
 import (
 	"fmt"
-	"logger/log"
-	"logger/loglevel"
+	"logger/pkg/logging"
 )
 
 func main() {
-	fmt.Println(loglevel.DEBUG)
-	fmt.Println(loglevel.LogLevelToString(loglevel.DEBUG))
-	log := log.NewLog("Hello, World!", "main", loglevel.DEBUG)
-	fmt.Println(log.String())
+	fmt.Println(logging.DEBUG)
+	fmt.Println(logging.LogLevelToString(logging.DEBUG))
+	logEntry := logging.NewLog("Hello, World!", "main", logging.DEBUG)
+	fmt.Println(logEntry.String())
 }
